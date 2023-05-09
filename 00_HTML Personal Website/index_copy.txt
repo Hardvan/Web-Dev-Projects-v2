@@ -1,0 +1,99 @@
+<!-- Use Shift + Alt + F for auto Indenting code -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hardik's Personal Site</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <table cellspacing="20">
+      <tr>
+        <td>
+          <img src="images/Photo.jpg" alt="Hardik's Profile Picture" />
+        </td>
+        <td>
+          <h1>Hardik Pawar</h1>
+          <p>
+            <em
+              ><strong>Computer Science Student</strong> and a
+              <strong>Curious Programmer </strong></em
+            >at
+            <a href="https://www.rvce.edu.in/">RVCE!</a>
+          </p>
+          <p>
+            I am an Android and Web Developer. I love to play the guitar and
+            cycle!
+          </p>
+        </td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <h3>Programming Languages Known</h3>
+    <ul>
+      <li>C</li>
+      <li>Java</li>
+      <li>Python</li>
+      <li>Kotlin</li>
+    </ul>
+
+    <hr />
+
+    <h3>Education</h3>
+    <table cellspacing="10">
+      <thead>
+        <tr>
+          <th>Dates</th>
+          <th>Instituion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2010-2019</td>
+          <td>New Horizon Public School</td>
+        </tr>
+        <tr>
+          <td>2019-2021</td>
+          <td>Geetanjali Olympiad School</td>
+        </tr>
+        <tr>
+          <td>2021-2025</td>
+          <td>RV College of Engineering</td>
+        </tr>
+      </tbody>
+      <tfoot></tfoot>
+    </table>
+
+    <hr />
+
+    <h3>Skills</h3>
+    <table cellspacing="10">
+      <tr>
+        <td>Python</td>
+        <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td>Java</td>
+        <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td>⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td>Guitar</td>
+        <td>⭐⭐⭐⭐</td>
+      </tr>
+    </table>
+    <hr />
+
+    <a href="hobbies.html">My Hobbies</a>
+    <br />
+    <a href="contact.html">Contact Me</a>
+  </body>
+</html>
