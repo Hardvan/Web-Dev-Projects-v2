@@ -7,7 +7,7 @@ import dp from "../images/dp.jpg";
 function createCard(contact) {
   return (
     <Card
-      key={contact.id} // Not a prop
+      key={contact.id} // ? Not a prop. We need this.
       id={contact.id}
       name={contact.name}
       img={contact.imgURL}

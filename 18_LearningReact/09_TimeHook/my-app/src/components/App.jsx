@@ -3,12 +3,14 @@ import React, { useState } from "react";
 function App() {
   setInterval(updateTime, 1000);
 
+  // Getting the current time
   const now = new Date().toLocaleTimeString("en-US", {
     hour12: false,
     hour: "numeric",
     minute: "numeric",
   });
 
+  // Storing the current time in a state
   const [time, setTime] = useState(now);
 
   function updateTime() {
@@ -18,7 +20,7 @@ function App() {
       minute: "numeric",
       second: "numeric",
     });
-    setTime(newTime);
+    setTime(newTime); // Updating the state
   }
 
   return (

@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 
 function App() {
-  const [name, setName] = useState("");
-  const [headingText, setHeadingText] = useState("");
-  const [isMouseOver, setMouseOver] = useState(false);
-
-  function handleChange(event) {
-    setName(event.target.value);
-  }
+  const [name, setName] = useState(""); // For input text
+  const [headingText, setHeadingText] = useState(""); // For heading text
+  const [isMouseOver, setMouseOver] = useState(false); // For button color change
 
   function handleClick(event) {
     setHeadingText(name);
 
-    event.preventDefault(); // Prevent refreshing of page
+    event.preventDefault(); // ? Prevent refreshing of page
+  }
+
+  function handleChange(event) {
+    setName(event.target.value);
   }
 
   function handleMouseOver() {

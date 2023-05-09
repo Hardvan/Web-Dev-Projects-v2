@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function App() {
+  // A single object to store all the values
   const [contact, setContact] = useState({
     fName: "",
     lName: "",
@@ -8,12 +9,12 @@ function App() {
   });
 
   function handleChange(event) {
-    const { value, name } = event.target;
+    const { value, name } = event.target; // Destructuring
 
     setContact((prevValue) => {
       return {
-        ...prevValue,
-        [name]: value,
+        ...prevValue, // ? Spread Operator (used to copy all the values from prevValue)
+        [name]: value, // Dynamic Property Name (here 'name' can be fName, lName or email)
       };
 
       // Longer Method
