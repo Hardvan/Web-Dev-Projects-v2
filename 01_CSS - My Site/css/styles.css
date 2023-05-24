@@ -7,8 +7,8 @@ body {
 }
 
 h1 {
+  margin: 50px auto 0 auto; /* top, right, bottom, left */
   font-size: 5.625rem;
-  margin: 50px auto 0 auto;
   font-family: "Great Vibes", cursive;
   color: #1363df;
 }
@@ -16,8 +16,8 @@ h1 {
 h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
-  color: #1363df;
   font-weight: normal;
+  color: #1363df;
   padding-bottom: 10px;
 }
 
@@ -50,12 +50,12 @@ a:hover {
 
 .top-container {
   background-color: #dff6ff;
-  position: relative;
+  position: relative; /* Elements inside this container can be positioned relative to this container */
   padding-top: 100px;
 }
 
 .top-cloud {
-  position: absolute;
+  position: absolute; /* Means we can position it anywhere we want inside the top-container */
   right: 300px;
   top: 40px;
 }
@@ -70,6 +70,10 @@ a:hover {
   text-decoration: underline;
 }
 
+.middle-container {
+  margin: 100px 0;
+}
+
 .intro {
   width: 50%;
   margin: auto;
@@ -77,7 +81,7 @@ a:hover {
 
 .skill-row {
   width: 50%;
-  margin: 100px auto 100px auto;
+  margin: 100px auto; /* top & bottom, right & left */
   text-align: left;
 }
 
@@ -94,13 +98,9 @@ a:hover {
   margin-left: 30px;
 }
 
-.middle-container {
-  margin: 100px 0;
-}
-
 .bottom-container {
   background-color: #dff6ff;
-  padding: 50px 0 20px;
+  padding: 50px 0 20px; /* top, right & left, bottom */
 }
 
 .contact-message {
