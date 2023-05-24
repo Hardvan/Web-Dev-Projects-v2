@@ -1,10 +1,10 @@
-var buttonColors = ["red", "blue", "green", "yellow"];
+let buttonColors = ["red", "blue", "green", "yellow"];
 
-var gamePattern = [];
-var userClickedPattern = [];
+let gamePattern = [];
+let userClickedPattern = [];
 
-var started = false;
-var level = 0;
+let started = false;
+let level = 0;
 
 // Detecting Keyboard Press
 $(document).click(function () {
@@ -24,14 +24,14 @@ $(document).keypress(function () {
 });
 
 $(".btn").click(function () {
-  var userChosenColor = $(this).attr("id");
+  let userChosenColor = $(this).attr("id");
 
   userClickedPattern.push(userChosenColor);
 
   playSound(userChosenColor);
   animatePress(userChosenColor);
 
-  var last_index = userClickedPattern.length - 1;
+  let last_index = userClickedPattern.length - 1;
   checkAnswer(last_index);
 });
 
@@ -60,11 +60,11 @@ function nextSequence() {
   level += 1;
   $("#level-title").text("Level " + level);
 
-  var randomNumber = Math.floor(Math.random() * 4);
-  var randomChosenColor = buttonColors[randomNumber]; // Choosing Random Color
+  let randomNumber = Math.floor(Math.random() * 4);
+  let randomChosenColor = buttonColors[randomNumber]; // Choosing Random Color
   gamePattern.push(randomChosenColor); // Adding Color to Game Pattern
 
-  var currentButton = $("#" + randomChosenColor);
+  let currentButton = $("#" + randomChosenColor);
   currentButton.fadeIn(100).fadeOut(100).fadeIn(100); // Flashing the Button
 
   playSound(randomChosenColor);
@@ -78,7 +78,7 @@ function animatePress(currentColor) {
 }
 
 function playSound(name) {
-  var audio = new Audio("sounds/" + name + ".mp3");
+  let audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
 }
 
