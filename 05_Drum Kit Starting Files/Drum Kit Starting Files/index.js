@@ -1,75 +1,74 @@
-// Detection Button Press
+// Button Click Detection
+let drumButtons = document.querySelectorAll(".drum"); // Selects all the buttons with class drum
 
-var drumButtons = document.querySelectorAll(".drum");
-
-for (var i = 0; i < drumButtons.length; i++) {
+for (let i = 0; i < drumButtons.length; i++) {
+  // Adding Event Listener to all the buttons
   drumButtons[i].addEventListener("click", function () {
-    var buttonInnerHTML = this.innerHTML;
+    let key = this.innerHTML;
 
-    makeSound(buttonInnerHTML);
-
-    buttonAnimation(buttonInnerHTML);
+    makeSound(key);
+    buttonAnimation(key);
   });
 }
 
 // Detecting Keyboard Press
-
 document.addEventListener("keydown", function (event) {
-  makeSound(event.key);
+  let key = event.key;
 
-  buttonAnimation(event.key);
+  makeSound(key);
+  buttonAnimation(key);
 });
 
 function makeSound(key) {
   switch (key) {
     case "w":
-      var tom1 = new Audio("sounds/tom-1.mp3");
+      let tom1 = new Audio("sounds/tom-1.mp3");
       tom1.play();
       break;
 
     case "a":
-      var tom2 = new Audio("sounds/tom-2.mp3");
+      let tom2 = new Audio("sounds/tom-2.mp3");
       tom2.play();
       break;
 
     case "s":
-      var tom3 = new Audio("sounds/tom-3.mp3");
+      let tom3 = new Audio("sounds/tom-3.mp3");
       tom3.play();
       break;
 
     case "d":
-      var tom4 = new Audio("sounds/tom-4.mp3");
+      let tom4 = new Audio("sounds/tom-4.mp3");
       tom4.play();
       break;
 
     case "j":
-      var snare = new Audio("sounds/snare.mp3");
+      let snare = new Audio("sounds/snare.mp3");
       snare.play();
       break;
 
     case "k":
-      var crash = new Audio("sounds/crash.mp3");
+      let crash = new Audio("sounds/crash.mp3");
       crash.play();
       break;
 
     case "l":
-      var kick = new Audio("sounds/kick-bass.mp3");
+      let kick = new Audio("sounds/kick-bass.mp3");
       kick.play();
       break;
 
     default:
-      console.log(buttonInnerHTML);
+      console.log(`Wrong Key Pressed: ${key}`);
       break;
   }
 }
 
 // Animating the Drums when Pressed
-
 function buttonAnimation(currentKey) {
-  var activeButton = document.querySelector("." + currentKey);
+  let activeButton = document.querySelector("." + currentKey);
 
   activeButton.classList.add("pressed");
 
+  // Removing the added class after 100ms
   setTimeout(function () {
     activeButton.classList.remove("pressed");
   }, 100);
