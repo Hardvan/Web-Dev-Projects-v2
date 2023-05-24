@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 
+// Local DB
 mongoose.connect("mongodb://localhost:27017/fruitsDB");
 
+// Mongoose Model
 const fruitSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -14,7 +16,6 @@ const fruitSchema = new mongoose.Schema({
   },
   review: String,
 });
-
 const Fruit = mongoose.model("Fruit", fruitSchema);
 
 const fruit = new Fruit({
