@@ -4,13 +4,12 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
 
+// MongoDB
 mongoose.connect("mongodb://localhost:27017/blogDB");
-
 const postSchema = {
   title: String,
   content: String,
 };
-
 const Post = mongoose.model("Post", postSchema);
 
 const homeStartingContent = "Welcome to Hardvan's Blog Site!";
